@@ -1,0 +1,1 @@
+var e=`/mon-francais-m0/assets/pdf.worker.min-B5Yc7dP4.mjs`;export{e as default};
