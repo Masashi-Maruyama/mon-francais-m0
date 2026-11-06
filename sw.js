@@ -10,7 +10,7 @@
 //
 // GitHub Pages では他のページと同じオリジン (masashi-maruyama.github.io) を共有するので、
 // パスは登録したスコープ (例: /mon-francais-m0/) からの相対で扱い、消すキャッシュはこのページのものだけにする。
-const BUILD = 'fe1264dc032a41a3';
+const BUILD = '8796746cb553038f';
 const PREFIX = 'm0-probe-';
 const CACHE = `${PREFIX}${BUILD}`;
 const SCOPE = self.registration.scope;
