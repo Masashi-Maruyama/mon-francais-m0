@@ -1,0 +1,50 @@
+# 辞書パックの出典とライセンス
+
+このフォルダーの辞書パックは、次の公開データから作りました (作成日 2026-11-17、取得日 2026-11-17)。
+変換の手順は `tools/dict-build/build.mjs` にあります。元のデータは、このリポジトリには入れていません。
+
+## core.v1.json — CC BY-SA 4.0
+
+Lexique 4.1 と WikDict fra-jpn から抜き出して組み合わせ、開発時に作った下書きの訳を加えた、改変したデータです。
+このファイルは Creative Commons Attribution-ShareAlike 4.0 International (https://creativecommons.org/licenses/by-sa/4.0/) で提供します。
+WikDict の CC BY-SA 3.0 は、同じ要素を持つ後の版 (4.0) での改変の提供を認めています。
+
+| 出典 | 版 | 入手元 | ライセンス | 使った内容 |
+|---|---|---|---|---|
+| Lexique 4.1 | Lexique4.1.zip (2026-09-29) | https://lexique.org/databases/Lexique410/ | CC BY-SA 4.0 (配布元の README の記載) | 原形、品詞、名詞の性、原形の頻度 |
+| WikDict fra-jpn | FreeDict 版 2025.11.23 | https://download.freedict.org/dictionaries/fra-jpn/2025.11.23/ | CC BY-SA 3.0 Unported | 日本語訳、名詞の性 |
+| 下書きの訳 | — | `tools/dict-build/drafts-a1.tsv` | CC BY-SA 4.0 | 辞書に訳のない語の日本語訳 (未確認) |
+
+引用:
+
+- New, B., Pallier, C., Schalchli, G., Bourgin, J., & Gimenes, M. (2026). Lexique 4: a major upgrade of the « Lexique » French Lexical Database. *Behavior Research Methods*. http://www.lexique.org
+- New, B., Pallier, C., Brysbaert, M., & Ferrand, L. (2004). Lexique 2: A New French Lexical Database. *Behavior Research Methods, Instruments, & Computers*, 36(3), 516–524.
+- WikDict (https://www.wikdict.com/)。Wiktionary (https://www.wiktionary.org/) の内容を DBnary (http://kaiko.getalp.org/about-dbnary/) 経由で抽出した辞書。訳は Wiktionary の寄稿者によるものです。
+
+改変の内容: 頻度の上位 800 の原形 (名詞、動詞、形容詞、副詞) から、訳のある語だけを選びました。語義は 4 つまで、言い換えは 3 つまでに絞りました。
+合字を使わない綴り (oeil) は正しい綴り (œil) に直しました。訳が基本の意味として不適切な項目には「要確認」の印をつけました (`tools/dict-build/hold.txt`)。
+
+## levels.v1.json — CC BY-NC-SA 4.0
+
+FLELex (TreeTagger、Beacco 版) のレベルを、core に収録した語の分だけ抜き出したものです。
+このファイルは Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (https://creativecommons.org/licenses/by-nc-sa/4.0/) で提供します。
+**営利の目的では使えません。** core とはライセンスが両立しないので、別のファイルにして、アプリが実行時に結びつけます。
+
+| 出典 | 版 | 入手元 | ライセンス | 使った内容 |
+|---|---|---|---|---|
+| FLELex | FleLex_TT_Beacco.tsv | https://cental.uclouvain.be/cefrlex/flelex/download/ | CC BY-NC-SA 4.0 | A1〜B2 のレベル |
+
+引用:
+
+- François, T., Gala, N., Watrin, P., & Fairon, C. (2014). FLELex: a graded lexical resource for French foreign learners. *LREC 2014*.
+- Pintard, A., & François, T. (2020). Combining expert knowledge with frequency information to infer CEFR levels for words. *READI 2020*.
+
+レベルは教科書コーパスにもとづく目安で、公式の CEFR ではありません。
+
+## 元のファイルの確認
+
+| ファイル | SHA-256 |
+|---|---|
+| Lexique4.1.tsv | f112ad487334c8ab702e6b95cf08110b2ac534d1896e1643f9c669f91a139a84 |
+| fra-jpn.tei | 472c8e0fc758e69c62c9eea20d389a80357dc378ced0eb56027d899a6e80e612 |
+| FleLex_TT_Beacco.tsv | e0cbdb672fa4f83155acec4c8f01f179b30be08cb3d2d6cf0d9f25042b01e3d4 |
