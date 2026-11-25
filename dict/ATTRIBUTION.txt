@@ -1,6 +1,6 @@
 # 辞書パックの出典とライセンス
 
-このフォルダーの辞書パックは、次の公開データから作りました (作成日 2026-11-24、取得日 2026-11-17)。
+このフォルダーの辞書パックは、次の公開データから作りました (作成日 2026-11-25、取得日 2026-11-17)。
 変換の手順は `tools/dict-build/build.mjs` にあります。元のデータは、このリポジトリには入れていません。
 
 ## core.v1.json — CC BY-SA 4.0
@@ -13,7 +13,7 @@ WikDict の CC BY-SA 3.0 は、同じ要素を持つ後の版 (4.0) での改変
 |---|---|---|---|---|
 | Lexique 4.1 | Lexique4.1.zip (2026-09-29) | https://lexique.org/databases/Lexique410/ | CC BY-SA 4.0 (配布元の README の記載) | 原形、品詞、名詞の性、原形の頻度 |
 | WikDict fra-jpn | FreeDict 版 2025.11.23 | https://download.freedict.org/dictionaries/fra-jpn/2025.11.23/ | CC BY-SA 3.0 Unported | 日本語訳、名詞の性 |
-| 下書きの訳 | — | `tools/dict-build/drafts-a1.tsv`、`primary.tsv`、`function-words.tsv`、`usage.tsv` | CC BY-SA 4.0 | 辞書に訳のない語、基本の語義、機能語の日本語訳、似た意味の語の使い分けの注記と用例 (未確認) |
+| 下書きの訳 | — | `tools/dict-build/drafts-a1.tsv`、`primary.tsv`、`function-words.tsv`、`usage.tsv`、`mass.tsv` | CC BY-SA 4.0 | 辞書に訳のない語、基本の語義、機能語の日本語訳、似た意味の語の使い分けの注記と用例、数えない名詞の文の枠 (未確認) |
 
 引用:
 
