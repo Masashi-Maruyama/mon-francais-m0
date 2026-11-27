@@ -1,6 +1,6 @@
 # 辞書パックの出典とライセンス
 
-このフォルダーの辞書パックは、次の公開データから作りました (作成日 2026-11-26、取得日 2026-11-17)。
+このフォルダーの辞書パックは、次の公開データから作りました (作成日 2026-11-27、取得日 2026-11-17)。
 変換の手順は `tools/dict-build/build.mjs` にあります。元のデータは、このリポジトリには入れていません。
 
 ## core.v1.json — CC BY-SA 4.0
@@ -21,7 +21,7 @@ WikDict の CC BY-SA 3.0 は、同じ要素を持つ後の版 (4.0) での改変
 - New, B., Pallier, C., Brysbaert, M., & Ferrand, L. (2004). Lexique 2: A New French Lexical Database. *Behavior Research Methods, Instruments, & Computers*, 36(3), 516–524.
 - WikDict (https://www.wikdict.com/)。Wiktionary (https://www.wiktionary.org/) の内容を DBnary (http://kaiko.getalp.org/about-dbnary/) 経由で抽出した辞書。訳は Wiktionary の寄稿者によるものです。
 
-改変の内容: 頻度の上位 4000 の原形 (名詞、動詞、形容詞、副詞) から、訳のある語だけを選びました。機能語 (前置詞、接続詞、代名詞、所有形容詞) は、`function-words.tsv` に挙げた語を収録し、頻度を Lexique から取りました。語義は 4 つまで、言い換えは 3 つまでに絞りました。
+改変の内容: 頻度の上位 4400 の原形 (名詞、動詞、形容詞、副詞) から、訳のある語だけを選びました。機能語 (前置詞、接続詞、代名詞、所有形容詞) は、`function-words.tsv` に挙げた語を収録し、頻度を Lexique から取りました。語義は 4 つまで、言い換えは 3 つまでに絞りました。
 合字を使わない綴り (oeil) は正しい綴り (œil) に直しました。訳が基本の意味として不適切な項目には「要確認」の印をつけました (`tools/dict-build/hold.txt`)。
 
 ## levels.v1.json — CC BY-NC-SA 4.0
